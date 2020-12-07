@@ -5,8 +5,8 @@
 </ion-header>
 
 
-<ion-input  [(ngModel)]="userInput">BUSCA PELICULAS:</ion-input>
-<button color="light"ion-button (click)="botonClick()">BUSCA</button>
+<ion-textarea id='buscador' [(ngModel)]="userInput">BUSCA PELICULAS:</ion-textarea>
+<ion-button color="light"ion-button (click)="botonClick()">BUSCA</ion-button>
 <ion-content>
   <ion-list>
     <ion-item button *ngFor="let item of (results |async)" [routerLink]="['/', 'detalle', item.imdbID]">

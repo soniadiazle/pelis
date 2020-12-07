@@ -17,8 +17,7 @@ export class DetallePage implements OnInit {
     let imdbID = this.activatedRoute.snapshot.paramMap.get('imdbID');
     this.peliculaService.getDetalles(imdbID).subscribe(result => {
       this.information = result;
-    console.log(result);
-    console.log(imdbID);
+    
   });
 }
 
